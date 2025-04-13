@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>KeyMatrix Interface</title>
+</head>
+<body>
+  <h1>KeyMatrix Core12</h1>
+  <input id="query" placeholder="Введите запрос">
+  <button onclick="askAI()">Отправить</button>
+  <div id="response"></div>
+  <script>
+    function askAI() {
+      const query = document.getElementById('query').value;
+      fetch('/ask', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query })
+      })
+      .then(response => response.json())
+      .then(data => document.getElementById('response').textContent = data.answer);
+    }
+  </script>
+</body>
+</html>
