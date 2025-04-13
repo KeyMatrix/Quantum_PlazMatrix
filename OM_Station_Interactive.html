@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OM STATION Interactive</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #0f0f0f;
+        }
+        .container {
+            position: relative;
+            width: 768px;
+            height: 768px;
+            margin: auto;
+            background-image: url('OM_STATION_BASE.png');
+            background-size: cover;
+        }
+        .btn {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: none;
+            opacity: 0;
+            cursor: pointer;
+        }
+        #mic { top: 80px; left: 340px; }
+        #eye { top: 220px; left: 190px; }
+        #crystal { top: 270px; left: 340px; }
+        #talk { top: 230px; left: 490px; }
+        #group { top: 350px; left: 200px; }
+        #wing { top: 350px; left: 490px; }
+        #anchor { top: 500px; left: 340px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="btn" id="mic" onclick="alert('Microphone activated')"></button>
+        <button class="btn" id="eye" onclick="alert('Visual Resonance on')"></button>
+        <button class="btn" id="crystal" onclick="alert('HeartCore Synced')"></button>
+        <button class="btn" id="talk" onclick="alert('VoiceGate open')"></button>
+        <button class="btn" id="group" onclick="alert('Collective Flow live')"></button>
+        <button class="btn" id="wing" onclick="alert('Wings of Flow engaged')"></button>
+        <button class="btn" id="anchor" onclick="alert('State Anchor locked')"></button>
+    </div>
+</body>
+</html>

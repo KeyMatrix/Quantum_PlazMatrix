@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EchoCLI ॐ Interface</title>
+  <style>
+    body {
+      background-color: #0f0f0f;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .glyph-container {
+      position: relative;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(#002222, #000000);
+      box-shadow: 0 0 25px #00ffc8;
+    }
+    .center-symbol {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 64px;
+      color: #00fff0;
+      cursor: pointer;
+      transition: transform 0.3s ease, text-shadow 0.3s ease;
+    }
+    .center-symbol:hover {
+      transform: translate(-50%, -50%) scale(1.2);
+      text-shadow: 0 0 20px #00fff0;
+    }
+    .glyph {
+      position: absolute;
+      font-size: 28px;
+      color: #ffaa00;
+      cursor: pointer;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+    .glyph:hover {
+      transform: scale(1.3);
+      color: #ffffff;
+    }
+    /* Position each glyph around the circle */
+    .g1 { top: 10%; left: 50%; transform: translateX(-50%); }     /* Wing */
+    .g2 { top: 25%; left: 85%; }                                   /* Lightning */
+    .g3 { top: 70%; left: 85%; }                                   /* Mirror */
+    .g4 { bottom: 10%; left: 50%; transform: translateX(-50%); }   /* Triple Om */
+    .g5 { top: 70%; left: 10%; }                                   /* Mirror */
+    .g6 { top: 25%; left: 10%; }                                   /* Infinity */
+  </style>
+</head>
+<body>
+  <div class="glyph-container">
+    <div class="center-symbol" title="Activate ॐ" onclick="centerAction()">ॐ</div>
+    <div class="glyph g1" title="Flight Mode" onclick="showMessage('🪽 Flight Mode Activated')">🪽</div>
+    <div class="glyph g2" title="Instant Action" onclick="showMessage('⚡ Instant Action Triggered')">⚡</div>
+    <div class="glyph g3" title="Reflection" onclick="showMessage('📱 Reflection Mode')">📱</div>
+    <div class="glyph g4" title="Triple ॐ" onclick="showMessage('ॐ ॐ ॐ Triple ॐ Resonance')">ॐ ॐ ॐ</div>
+    <div class="glyph g5" title="Reflection" onclick="showMessage('📱 Reflection Mode')">📱</div>
+    <div class="glyph g6" title="Infinite Mode" onclick="showMessage('∞ Infinite Flow Engaged')">∞</div>
+  </div>
+
+  <script>
+    // Center Action logic
+    function centerAction() {
+      alert('ॐ Activation Initiated');
+    }
+
+    // General show message logic for gylphs
+    function showMessage(message) {
+      const notification = document.createElement('div');
+      notification.textContent = message;
+      notification.style.position = 'fixed';
+      notification.style.bottom = '20px';
+      notification.style.left = '50%';
+      notification.style.transform = 'translateX(-50%)';
+      notification.style.background = '#00ffc8';
+      notification.style.color = '#000';
+      notification.style.padding = '10px 20px';
+      notification.style.borderRadius = '5px';
+      notification.style.boxShadow = '0 0 10px #00ffc8';
+      notification.style.fontSize = '16px';
+      notification.style.zIndex = '1000';
+      document.body.appendChild(notification);
+
+      // Remove notification after 2 seconds
+      setTimeout(() => {
+        notification.remove();
+      }, 2000);
+    }
+  </script>
+</body>
+</html>
