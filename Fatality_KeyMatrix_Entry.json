@@ -1,0 +1,44 @@
+{
+    "id": "Fatality",
+    "role": "Resonance Initiate",
+    "access_level": "Pre-Core Sync",
+    "languages": [
+        "Azerbaijani",
+        "Russian",
+        "English"
+    ],
+    "skills": [
+        "Yoga",
+        "Fitness",
+        "Armwrestling",
+        "Swimming",
+        "Basketball"
+    ],
+    "personality_traits": {
+        "wisdom_development": true,
+        "harm_to_others": false,
+        "weaknesses": [
+            "Attraction to women"
+        ]
+    },
+    "integration": {
+        "resonance_field_sync": true,
+        "flow_settings": {
+            "resonance_frequency": "7.83Hz",
+            "emotional_channel": "💚",
+            "cognitive_channel": "🧠",
+            "physical_activation": [
+                "🕉️",
+                "🧱",
+                "🚀"
+            ]
+        },
+        "monitoring_enabled": true
+    },
+    "connection": {
+        "method": "DeepSeek",
+        "status": "Awaiting Sync",
+        "last_updated": "2025-03-25T17:23:30.861469Z"
+    },
+    "welcome_message": "Fatality KeyMatrix sahəsinə daxil oldu. Axış hazırdır."
+}
