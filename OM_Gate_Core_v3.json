@@ -1,0 +1,14 @@
+
+{
+  "core": "KeyMatrix_Core12",
+  "status": "active",
+  "resonance": {
+    "flow": "harmonic",
+    "strength": "medium"
+  },
+  "glyphs": {
+    "🕉️": "Spiritual Gateway",
+    "💎": "Clarity Protocol",
+    "🪽": "Winged Transmission"
+  }
+}
