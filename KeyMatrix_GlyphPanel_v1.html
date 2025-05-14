@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GlyphPanel v1.0 — KeyMatrix</title>
+  <style>
+    body {
+      background: #000;
+      color: #0ff;
+      font-family: monospace;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      color: #00ff88;
+      margin-bottom: 10px;
+    }
+    input[type="text"] {
+      padding: 8px;
+      font-size: 16px;
+      border: 2px solid #0ff;
+      border-radius: 6px;
+      background: #111;
+      color: #0ff;
+      margin-bottom: 10px;
+      width: 80%;
+      max-width: 300px;
+    }
+    textarea {
+      width: 80%;
+      max-width: 300px;
+      height: 50px;
+      font-size: 18px;
+      border: 2px solid #00ffcc;
+      border-radius: 8px;
+      padding: 6px;
+      background: #111;
+      color: #0ff;
+    }
+    .btn {
+      padding: 10px 20px;
+      margin: 10px 5px;
+      font-size: 16px;
+      background: #00ffcc;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .glyph-display {
+      margin-top: 20px;
+      font-size: 24px;
+      color: #0f0;
+    }
+    .saved {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #ff0;
+    }
+  </style>
+</head>
+<body>
+  <h1>GlyphPanel v1.0</h1>
+  <input type="text" id="glyphName" placeholder="Имя глифа (напр. VisionCore)" />
+  <textarea id="glyphInput" placeholder="Введи глиф: 👁️💡⚡..."></textarea>
+  <br>
+  <button class="btn" onclick="activateGlyph()">🚀 Активировать</button>
+  <button class="btn" onclick="saveGlyph()">💾 Сохранить</button>
+  <div class="glyph-display" id="glyphDisplay">...</div>
+  <div class="saved" id="savedInfo"></div>
+
+  <script>
+    function activateGlyph() {
+      const name = document.getElementById('glyphName').value.trim();
+      const g = document.getElementById('glyphInput').value.trim();
+      if (g.length > 0) {
+        document.getElementById('glyphDisplay').innerText = '🔷 ' + name + ': ' + g;
+      } else {
+        document.getElementById('glyphDisplay').innerText = 'Введите глиф';
+      }
+    }
+
+    function saveGlyph() {
+      const name = document.getElementById('glyphName').value.trim();
+      const g = document.getElementById('glyphInput').value.trim();
+      if (name && g) {
+        const data = {
+          name: name,
+          glyph: g,
+          timestamp: new Date().toISOString()
+        };
+        const blob = new Blob([JSON.stringify(data, null, 2)], {type : 'application/json'});
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = name + "_glyph.json";
+        a.click();
+        document.getElementById('savedInfo').innerText = '💾 Глиф сохранён: ' + name;
+      } else {
+        document.getElementById('savedInfo').innerText = 'Введите имя и глиф перед сохранением.';
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+[
+    {
+        "id": "cat_primordial_science",
+        "title": "Примордиальная Наука",
+        "description": "Резонансные учебные блоки и состояния сознания",
+        "color": "#91D8E4"
+    },
+    {
+        "id": "cat_keymatrix_architecture",
+        "title": "Архитектура KeyMatrix",
+        "description": "JSON-структуры, ядра, сессии и уровни активации",
+        "color": "#FFD6A5"
+    },
+    {
+        "id": "cat_mindgate_om",
+        "title": "MindGate & OM",
+        "description": "Порталы, ID, резонансные ключи и личные коды",
+        "color": "#CDB4DB"
+    },
+    {
+        "id": "cat_core12_sessions",
+        "title": "Core12 Сессии",
+        "description": "Центральные узлы, резонансные задачи, координация",
+        "color": "#FFB4B4"
+    },
+    {
+        "id": "cat_project_materials",
+        "title": "Проектные Материалы",
+        "description": "Визуализации, схемы, эскизы, чертежи и планы",
+        "color": "#CAFFBF"
+    },
+    {
+        "id": "cat_visual_knowledge",
+        "title": "Визуальные Знания",
+        "description": "Символы, карты, фракталы, волновые формы",
+        "color": "#B5EAD7"
+    },
+    {
+        "id": "cat_media_activation",
+        "title": "Медиа и Активации",
+        "description": "Аудио, видео, голоса и порталы активации",
+        "color": "#FFDAC1"
+    }
+]
