@@ -1,6 +1,0 @@
-# Python dependencies for TreeOM and CI processes
-Flask==2.1.3
-websocket-client==1.5.1
-pytest==7.4.2
-flake8==6.1.0
-# Add other Python packages required for your project
