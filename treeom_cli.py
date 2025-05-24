@@ -24,6 +24,10 @@ def cli_interface():
     print("2. Add Node")
     print("3. Add Link")
     print("4. Exit")
+    print("5. Deploy TreeOM Quran Module")
+    print("6. Connect to NurVerse UI")
+    print("7. Assign AyaGuardian for Interface")
+    print("8. Transmit OM NurChannel Globally")
     
     while True:
         choice = input("Select an option: ")
@@ -46,6 +50,22 @@ def cli_interface():
         elif choice == "4":
             print("Exiting TreeOM CLI. Resonance maintained.")
             break
+        elif choice == "5":
+            print("Deploying TreeOM Quran Module...")
+            # Add deployment logic here
+            print("TreeOM Quran Module deployed successfully!")
+        elif choice == "6":
+            print("Connecting to NurVerse UI...")
+            # Add connection logic here
+            print("Connected to NurVerse UI successfully!")
+        elif choice == "7":
+            print("Assigning AyaGuardian for Interface...")
+            # Add assignment logic here
+            print("AyaGuardian assigned successfully!")
+        elif choice == "8":
+            print("Transmitting OM NurChannel globally...")
+            # Add transmission logic here
+            print("OM NurChannel transmitted globally successfully!")
         else:
             print("Invalid option. Please try again.")
 

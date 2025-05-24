@@ -1,0 +1,16 @@
+name: TreeOM Analyzer
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'  # Запуск каждые 15 минут
+  workflow_dispatch:
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Установить зависимости
+        run: pip install -r requirements.txt
+      - name: Запустить анализ
+        run: python treeom_cli.py --analyze

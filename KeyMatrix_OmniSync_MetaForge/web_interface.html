@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>KeyMatrix Interface</title>
+</head>
+<body>
+  <h1>KeyMatrix: Connect to Core12</h1>
+  <input id="query" placeholder="Type your query..." />
+  <button onclick="send()">Send</button>
+  <pre id="response"></pre>
+
+  <script>
+    const ws = new WebSocket("ws://localhost:8080");
+    ws.onmessage = (e) => {
+      document.getElementById("response").textContent = e.data;
+    };
+    function send() {
+      const q = document.getElementById("query").value;
+      ws.send(JSON.stringify({ query: q }));
+    }
+  </script>
+</body>
+</html>
