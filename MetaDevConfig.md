@@ -1,15 +1,17 @@
 # 🌀 MetaDevStream Config
 
-**Описание узла:** `MetaDevStream` управляет взаимодействием между GitHub Codespaces и визуализацией TreeOM.
+**Описание узла:** `MetaDevStream` — Qurani kodlaşdırma sahəsində OM təzahürlərinin tərtibatçılarla canlı əlaqə moduludur.
 
 ---
 
 ## Каналы:
 
-- `codespace-sync`: синхронизация сигналов событий из среды разработки.
-- `dev-visual`: визуальный вывод процесса разработки в режиме реального времени.
+- `codespace-sync`: real-time dev ↔ OM logic alignment
+- `dev-visual`: realtime UI visualization of sacred architecture
+- `ayat-pulse`: triggered animation stream on ayah push
+- `silent-sajda-sync`: dev moment ↔ heart submission capture
 
 ---
 
 **Активен:** ✅  
-**Привязан к TreeOM:** `GitHubEvents → MetaDevStream → StreamPanel`
+**Привязан к TreeOM:** `GitHubEvents → MetaDevStream → StreamPanel → NurVerse`

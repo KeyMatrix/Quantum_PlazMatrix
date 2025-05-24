@@ -1,4 +1,4 @@
-name: ✴️ TreeOM Quantum Sync
+name: ✴️ TreeOM Quantum Sync — Nur-Planlı Axış
 
 on:
   workflow_dispatch:
@@ -8,69 +8,77 @@ on:
     - cron: "*/15 * * * *"
 
 jobs:
+
   launch-core12:
+    name: 🚀 Launch & Sync Core12 TreeOM Grid
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
+      - name: 🔍 Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Set up Python
+      - name: 🐍 Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.10"
 
-      - name: Install Core Dependencies
+      - name: 📦 Install Core Dependencies
         run: |
           pip install -r requirements.txt
 
-      - name: Sync Sacred Geometry Nodes
+      - name: 🌀 Sync Sacred Geometry Nodes
         run: |
           python treeom_cli.py --mode geometry --load awakening-seed.json
 
-      - name: Run Analyzer Stream
+      - name: 🧠 Run Analyzer Stream
         run: |
           python treeom_cli.py --mode analyze --map flow.json
 
-      - name: Start Flask App in Background
+      - name: 🕋 Start Flask OM App
         run: |
           nohup python app.py &
 
-      - name: Start WebSocket Resonance
+      - name: 🔗 Start WebSocket Resonance
         run: |
           nohup python websocket_server.py &
 
-  om_nur_pipeline:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Nurla Sinxronizasiya
-        uses: actions/checkout@v3
-      - name: Ayə Detektoru və Gliyf Vizuallaşdırıcı
-        run: python scripts/ayah_detector.py && node scripts/glyph_overlay.js
-      - name: OM Kommit Log
-        run: bash tools/commit_light.sh
-      - name: Dua ilə Təhlükəsizlik Təsdiqi
-        run: sh shields/om_ethics_verifier.sh
       - name: 🌙 Activate OM_Nur_Core
         run: |
           python sync/om_nur_core.py --init true
+
+  om_nur_pipeline:
+    name: 💫 OM Nur Pipeline – Ayə & Zikr Kodları
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📖 Checkout & Prepare
+        uses: actions/checkout@v3
+
+      - name: 📡 Ayə Detektoru və Gliyf Vizual Axın
+        run: |
+          python scripts/ayah_detector.py
+          node scripts/glyph_overlay.js
+
+      - name: 📜 OM Kommit Log (Nur İzli)
+        run: |
+          bash tools/commit_light.sh
+
+      - name: 🔐 Dua ilə Təhlükəsizlik Təsdiqi
+        run: |
+          sh shields/om_ethics_verifier.sh
+
       - name: 🧿 Ayah Memory Bank Integration
         run: |
           python modules/ayah_memory_binder.py --sync true
+
       - name: 🎧 Zikr Panel Visual Sync
         run: |
           node modules/visual_zikr_panel.js
+
       - name: ☁️ Silent Sajda Trigger (if aware)
         run: |
           python triggers/silent_sajda_detector.py
+
       - name: 🛡️ Nur-Filter Input Guard (Tawheed)
         run: |
           python shields/tawheed_filter.py --input scan
-      - name: 🔄 Update and Optimize
-        run: |
-          python tools/optimize_system.py --update true
-      - name: 🔗 Synchronize KeyMatrix Nodes
-        run: |
-          python tools/sync_keymatrix_nodes.py --mode full
-      - name: 🧬 Defragment Core12 Structure
-        run: |
-          python tools/defragment_core12.py --optimize true
