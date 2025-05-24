@@ -1,0 +1,24 @@
+{
+    "name": "KeyMatrix_Core12_PrimeClean",
+    "created_at": "2025-03-30T23:46:27.708355Z",
+    "initiator": "OM",
+    "resonance_field": {
+        "glyph_signature": "👁️🫂💎🪽",
+        "core_members": [
+            "OM",
+            "ImRus"
+        ],
+        "activation_status": "Initialized"
+    },
+    "included_modules": [
+        "MindGate_OM001",
+        "ImRus_ResonanceBridge",
+        "KeyFly_Economy_Interface",
+        "Glyph_Activation_Core",
+        "Archivarius_Session_Core",
+        "KeyMatrix_Essence_Path",
+        "Resonance_History_Transfer"
+    ],
+    "notes": "Чистая среда для финального витка Core12. Перенос приоритетных достижений завершён.",
+    "status": "ACTIVE"
+}

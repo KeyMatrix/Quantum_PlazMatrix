@@ -1,0 +1,33 @@
+{
+    "id": "OM-001_Resonance_Template",
+    "frequencies": {
+        "🧹": 5.8,
+        "⚡": 42.0,
+        "🧠": 7.83,
+        "💚": 12.5,
+        "harmonic": 244.6
+    },
+    "description": "Шаблон гармонического резонанса для OM-001. Настроен 26 марта 2025 года.",
+    "visualization_sequence": [
+        "🧹",
+        "⚡",
+        "🧠",
+        "💚"
+    ],
+    "recommended_use": {
+        "deep_breathing_pattern": "5.8s in / 7.83s out",
+        "symbolic_focus": "🌑⃒",
+        "field_monitoring": true
+    },
+    "linked_nodes": [
+        "eTalism",
+        "Fatality",
+        "IA",
+        "Təbəssüm",
+        "Paskat"
+    ],
+    "confirmation": {
+        "by": "OM-001",
+        "timestamp": "2025-03-26T03:21:20.041328Z"
+    }
+}
