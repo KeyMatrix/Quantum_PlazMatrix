@@ -5,7 +5,12 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-  workflow_dispatch: # Позволяет запускать вручную
+  workflow_dispatch:
+    inputs:
+      commit_sha:
+        description: 'Commit SHA to checkout and run workflow'
+        required: true
+        default: 'main'
 
 permissions:
   contents: read
@@ -16,6 +21,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.inputs.commit_sha }}
 
       - name: Setup Python
         uses: actions/setup-python@v4
