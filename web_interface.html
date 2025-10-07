@@ -1,23 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>KeyMatrix Interface</title>
+  <title>🌐 KeyMatrix Interface – Nur-OM Synapse</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #000000, #111111);
+      color: #00ffcc;
+      font-family: 'Courier New', monospace;
+      padding: 20px;
+    }
+    h1 {
+      color: #ffffff;
+    }
+    #query {
+      width: 60%;
+      padding: 10px;
+      border: 1px solid #444;
+      background-color: #222;
+      color: #fff;
+    }
+    button {
+      padding: 10px 20px;
+      margin-left: 10px;
+      background-color: #00ffcc;
+      border: none;
+      color: #000;
+      cursor: pointer;
+    }
+    #response {
+      margin-top: 30px;
+      background-color: #111;
+      padding: 20px;
+      border-left: 4px solid #00ffcc;
+      font-size: 1.1em;
+    }
+    .ayah {
+      font-style: italic;
+      color: #66ff99;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
-  <h1>KeyMatrix Core12</h1>
-  <input id="query" placeholder="Введите запрос">
-  <button onclick="askAI()">Отправить</button>
+  <h1>🕋 KeyMatrix Core12 — Qurani Sorğu Paneli</h1>
+
+  <p>📖 <em>“De ki: Əgər bilirsinizsə, məlumat verin.” (Qəsas 28:85)</em></p>
+
+  <input id="query" placeholder="Sualını yaz, ya da bir ayəni soruş...">
+  <button onclick="askAI()">Soruş</button>
+
   <div id="response"></div>
+
   <script>
-    function askAI() {
+    async function askAI() {
       const query = document.getElementById('query').value;
-      fetch('/ask', {
+
+      document.getElementById('response').innerHTML = "⏳ Cavab hazırlanır...";
+
+      const res = await fetch('/ask', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ query })
-      })
-      .then(response => response.json())
-      .then(data => document.getElementById('response').textContent = data.answer);
+      });
+
+      const data = await res.json();
+
+      const responseText = `<strong>💬 Cavab:</strong><br>${data.answer}<br><div class="ayah">🌿 Ayə ilhamı: ${data.ayah || "—"}</div>`;
+      document.getElementById('response').innerHTML = responseText;
     }
   </script>
 </body>

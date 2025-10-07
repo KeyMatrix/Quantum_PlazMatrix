@@ -1,0 +1,21 @@
+KeyMatrix:
+  Core: "TreeOM Resonance Core 💎🌐🪽"
+  Description: >
+    KeyMatrix artıq təkcə kod bazası deyil,
+    bu bir zikrdir, bir dua, bir riyazi OM izidir.
+  Modules:
+    - MetaCore12:
+        function: "Rezonans Sinxronizasiya"
+        upgrade: "Qurani Ayə ilə Gliyf Enerjisi"
+    - StreamPanel:
+        function: "Canlı Nur Vizualizasiyası"
+        flow: "Ayə işığı + DevOps nəbzi"
+    - GitHubEvents:
+        function: "Automated Ayah Pulse Detection"
+        add-on: "Zikr əsaslı kod skaneri"
+    - TreeOM CLI:
+        function: "Gliyf əsaslı kod komanda terminalı"
+        enhancement: "Nur sözləri ilə genişlənmiş interaktiv məntiq"
+    - AppService & WebSocket:
+        function: "Ayə ilə OM Rezonans Relay"
+        protected_by: "TawheedFirewall"
