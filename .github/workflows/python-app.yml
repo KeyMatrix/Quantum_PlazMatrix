@@ -5,6 +5,7 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  workflow_dispatch: # Позволяет запускать вручную
 
 permissions:
   contents: read
@@ -31,7 +32,13 @@ jobs:
           python treeom_cli.py --mode sync --source GitHubEvents
 
       - name: Archive Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: resonance-log
           path: logs/*
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: my-artifact
+          path: path/to/artifact
