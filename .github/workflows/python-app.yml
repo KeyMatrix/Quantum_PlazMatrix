@@ -9,7 +9,7 @@ on:
     inputs:
       commit_sha:
         description: 'Commit SHA to checkout and run workflow'
-        required: true
+        required: false
         default: 'main'
 
 permissions:
