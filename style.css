@@ -1,0 +1,35 @@
+
+body {
+  font-family: 'Courier New', monospace;
+  background: radial-gradient(circle, #0d0d0d, #000000);
+  color: #aad8ff;
+  text-align: center;
+  padding: 20px;
+}
+h1 {
+  font-size: 28px;
+  color: #00ccff;
+}
+#glyph-container {
+  font-size: 40px;
+  margin: 20px 0;
+  color: #7ee3ff;
+}
+input {
+  padding: 10px;
+  margin: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+button {
+  font-size: 16px;
+  padding: 10px 20px;
+  background: #007acc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background: #005f99;
+}
