@@ -1,0 +1,23 @@
+{
+  "core_artifacts": [
+    "resonance-log",
+    "my-artifact"
+  ],
+  "glyph_modules": [
+    "DeepGlyph Engine",
+    "MetaBridge OM",
+    "TreeOM"
+  ],
+  "sync_status": "pending",
+  "last_updated": "2025-10-07T13:53:38Z",
+  "ci_cd": {
+    "treeom_cli": "enabled",
+    "analyzer": "enabled",
+    "artifact_upload": "enabled"
+  },
+  "gh_pages": {
+    "publish": true,
+    "index": "index.html",
+    "web_interface": "web_interface.html"
+  }
+}
