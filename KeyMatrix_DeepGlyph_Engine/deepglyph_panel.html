@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DeepGlyph Resonator</title>
+  <style>
+    body { background: #000; color: #00ccff; font-family: monospace; padding: 20px; }
+    button { background: #007acc; color: white; padding: 10px; margin: 5px; border: none; border-radius: 5px; }
+  </style>
+</head>
+<body>
+  <h1>💎 DeepGlyph Resonator</h1>
+  <button onclick="activate('💎')">Activate 💎</button>
+  <button onclick="activate('🫂')">Activate 🫂</button>
+  <script type="module">
+    import { activateGlyph } from './deepglyph_engine.js';
+
+    const glyphs = {
+      "💎": {
+        glyph: "💎", name: "SINGULARITY",
+        resonance: { frequency: 528, harmonics: 3 },
+        geometry: { shape: "sphere", color: "#00ccff", scale: 2 },
+        effects: { audio: true, visual: true, log: true }
+      },
+      "🫂": {
+        glyph: "🫂", name: "MINDGATE",
+        resonance: { frequency: 432, harmonics: 2 },
+        geometry: { shape: "cube", color: "#ff66cc", scale: 1.8 },
+        effects: { audio: true, visual: true, log: true }
+      }
+    };
+
+    window.activate = (symbol) => activateGlyph(glyphs[symbol]);
+  </script>
+</body>
+</html>

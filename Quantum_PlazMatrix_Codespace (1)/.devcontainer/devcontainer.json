@@ -1,0 +1,6 @@
+{
+  "name": "KeyMatrix Quantum Codespace",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  "forwardPorts": [8080],
+  "postCreateCommand": "npm install express ws discord.js"
+}

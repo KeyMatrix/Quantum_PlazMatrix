@@ -1,0 +1,16 @@
+
+{
+  "bridge_id": "MetaBridge.om",
+  "sync_level": 7.7,
+  "github_repo": "https://github.com/YOUR_USER/YOUR_REPO",
+  "discord_webhook_url": "https://discord.com/api/webhooks/XXXX/XXXX",
+  "meta_settings": {
+    "auto_sync": true,
+    "log_level": "debug",
+    "modules_active": [
+      "MetaCore",
+      "Archivarius",
+      "TreeOM"
+    ]
+  }
+}
