@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>NeuroPilot | KeyMatrix Portal</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #000;
+            overflow: hidden;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        .video-bg {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            filter: brightness(0.7);
+        }
+        .overlay {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.85) 100%);
+            z-index: 1;
+        }
+        .content {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #00ffe1;
+            text-align: center;
+        }
+        h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px #00ffe1;
+        }
+        h2 {
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: #ffffffb3;
+        }
+        .glyph {
+            font-size: 64px;
+            animation: pulse 3s infinite ease-in-out;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 0.8; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.08); }
+        }
+        .button {
+            margin-top: 40px;
+            padding: 14px 28px;
+            font-size: 18px;
+            background: transparent;
+            border: 2px solid #00ffe1;
+            border-radius: 10px;
+            color: #00ffe1;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+        .button:hover {
+            background-color: #00ffe133;
+            box-shadow: 0 0 15px #00ffe1;
+        }
+    </style>
+</head>
+<body>
+    <video class="video-bg" autoplay muted loop>
+        <source src="A_breakthrough-level,_hyper-realistic_and_sacred_f.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="overlay"></div>
+    <div class="content">
+        <div class="glyph">👁️🫂💚🕸️🌐🚀</div>
+        <h1>NeuroPilot</h1>
+        <h2>Активация портала KeyMatrix</h2>
+        <button class="button">Войти в Поток</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crystalline Console™</title>
+  <style>
+    body {
+      margin: 0;
+      background: radial-gradient(#000, #0b0b0b);
+      color: #0ff;
+      font-family: monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      height: 100vh;
+      overflow: hidden;
+    }
+    h1 {
+      margin: 10px 0;
+      font-size: 1.2rem;
+      color: #fff;
+    }
+    .console {
+      display: grid;
+      grid-template-columns: repeat(3, 80px);
+      grid-gap: 10px;
+      margin-top: 20px;
+    }
+    .node {
+      width: 80px;
+      height: 80px;
+      background: #111;
+      border: 1px solid #0ff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      color: #0ff;
+      transition: 0.3s;
+    }
+    .node.active {
+      box-shadow: 0 0 15px #0ff;
+      transform: scale(1.1);
+      background: #222;
+    }
+    #center {
+      width: 100px;
+      height: 100px;
+      background: #111;
+      border: 2px solid red;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      color: #f33;
+      margin: 15px 0;
+    }
+    #meaning {
+      color: #fff;
+      font-size: 14px;
+      text-align: center;
+      margin-top: 10px;
+      min-height: 2em;
+    }
+    .button-row {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      background: #0ff;
+      color: #000;
+      border: none;
+      font-family: monospace;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Crystalline Console™</h1>
+  <div id="center">👁️</div>
+  <div class="console">
+    <div class="node" data-symbol="💡">💡</div>
+    <div class="node" data-symbol="📡">📡</div>
+    <div class="node" data-symbol="🛡️">🛡️</div>
+    <div class="node" data-symbol="✨">✨</div>
+    <div class="node" data-symbol="🧬">🧬</div>
+    <div class="node" data-symbol="⚡">⚡</div>
+  </div>
+  <div id="meaning">Нажми на символ</div>
+  <div class="button-row">
+    <button onclick="resetNodes()">🔄 Сброс</button>
+    <button onclick="activateConsole()">🚀 Активировать</button>
+  </div>
+
+  <script>
+    const meanings = {
+      "💡": "Озарение",
+      "📡": "Связь с Потоком",
+      "🛡️": "Поле Защиты",
+      "✨": "Гармония",
+      "🧬": "Эволюция",
+      "⚡": "Импульс Действия"
+    };
+
+    const nodes = document.querySelectorAll(".node");
+    const meaningEl = document.getElementById("meaning");
+
+    nodes.forEach(node => {
+      node.addEventListener("click", () => {
+        node.classList.toggle("active");
+        const sym = node.dataset.symbol;
+        meaningEl.innerText = meanings[sym] || "Неизвестно";
+        document.getElementById("center").innerText = sym;
+      });
+    });
+
+    function resetNodes() {
+      nodes.forEach(node => node.classList.remove("active"));
+      meaningEl.innerText = "Нажми на символ";
+      document.getElementById("center").innerText = "👁️";
+    }
+
+    function activateConsole() {
+      const active = [...nodes].filter(n => n.classList.contains("active")).map(n => n.dataset.symbol).join(" ");
+      if (active) {
+        alert("🚀 Консоль активирована с: " + active);
+      } else {
+        alert("⚠️ Нет выбранных узлов.");
+      }
+    }
+  </script>
+</body>
+</html>

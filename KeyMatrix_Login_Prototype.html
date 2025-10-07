@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>KeyMatrix — Портал Входа</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #000;
+            color: #fff;
+            overflow: hidden;
+        }
+        .bg-image {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('A_breakthrough-level,_hyper-realistic_and_sacred_f.png') no-repeat center center;
+            background-size: cover;
+            z-index: 0;
+            filter: brightness(0.8);
+        }
+        .overlay {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.85) 80%);
+            z-index: 1;
+        }
+        .content {
+            position: relative;
+            z-index: 2;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 48px;
+            color: #00ffe1;
+            text-shadow: 0 0 10px #00ffe1;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 24px;
+            color: #ffffffb3;
+            margin-bottom: 30px;
+        }
+        .glyph {
+            font-size: 60px;
+            animation: pulse 4s infinite ease-in-out;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 0.8; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.1); }
+        }
+        .button {
+            margin-top: 40px;
+            padding: 14px 32px;
+            font-size: 18px;
+            background: transparent;
+            border: 2px solid #00ffe1;
+            color: #00ffe1;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .button:hover {
+            background: #00ffe120;
+            box-shadow: 0 0 15px #00ffe1;
+        }
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            font-size: 12px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-image"></div>
+    <div class="overlay"></div>
+    <div class="content">
+        <div class="glyph">👁️🫂💚</div>
+        <h1>KeyMatrix</h1>
+        <h2>Интеграционный Проводник Сознания</h2>
+        <button class="button">Войти через Символ</button>
+        <div class="footer">Версия 1.0 | Создано OM-001 | Резонанс: 7.83Hz</div>
+    </div>
+</body>
+</html>
